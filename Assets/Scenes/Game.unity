@@ -374,6 +374,7 @@ GameObject:
   - component: {fileID: 453685819}
   - component: {fileID: 453685821}
   - component: {fileID: 453685820}
+  - component: {fileID: 453685822}
   m_Layer: 5
   m_Name: Value (TMP)
   m_TagString: Untagged
@@ -498,6 +499,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 453685818}
   m_CullTransparentMesh: 1
+--- !u!114 &453685822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453685818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 972fcd565b56490c836d6ad96fa0ba8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _format: '{0:F2}'
+  _multimeter: {fileID: 1405660216}
+  _type: 3
 --- !u!1 &512376189
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,6 +660,7 @@ GameObject:
   - component: {fileID: 647620334}
   - component: {fileID: 647620336}
   - component: {fileID: 647620335}
+  - component: {fileID: 647620337}
   m_Layer: 5
   m_Name: Value (TMP)
   m_TagString: Untagged
@@ -770,6 +787,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 647620333}
   m_CullTransparentMesh: 1
+--- !u!114 &647620337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647620333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 972fcd565b56490c836d6ad96fa0ba8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _format: '{0:F2}'
+  _multimeter: {fileID: 1405660216}
+  _type: 2
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1178,6 +1210,7 @@ GameObject:
   - component: {fileID: 1209782098}
   - component: {fileID: 1209782100}
   - component: {fileID: 1209782099}
+  - component: {fileID: 1209782101}
   m_Layer: 5
   m_Name: Value (TMP)
   m_TagString: Untagged
@@ -1304,6 +1337,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1209782097}
   m_CullTransparentMesh: 1
+--- !u!114 &1209782101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209782097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 972fcd565b56490c836d6ad96fa0ba8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _format: '{0:F2}'
+  _multimeter: {fileID: 1405660216}
+  _type: 1
 --- !u!1 &1278146218
 GameObject:
   m_ObjectHideFlags: 0
@@ -1465,6 +1513,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 4913b7c28136838419706d567b8657dc, type: 3}
+--- !u!114 &1405660216 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 291247223101066337, guid: 4913b7c28136838419706d567b8657dc, type: 3}
+  m_PrefabInstance: {fileID: 1405660215}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74bb4372a8d7479a8ad6c47b44bd31b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1473687310
 GameObject:
   m_ObjectHideFlags: 0
@@ -1725,6 +1784,7 @@ GameObject:
   - component: {fileID: 2001540088}
   - component: {fileID: 2001540090}
   - component: {fileID: 2001540089}
+  - component: {fileID: 2001540091}
   m_Layer: 5
   m_Name: Value (TMP)
   m_TagString: Untagged
@@ -1851,3 +1911,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001540087}
   m_CullTransparentMesh: 1
+--- !u!114 &2001540091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001540087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 972fcd565b56490c836d6ad96fa0ba8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _format: '{0:F2}'
+  _multimeter: {fileID: 1405660216}
+  _type: 4

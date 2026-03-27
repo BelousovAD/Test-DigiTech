@@ -485,6 +485,7 @@ GameObject:
   - component: {fileID: 5551703870333914571}
   - component: {fileID: 8837266248500052590}
   - component: {fileID: 6719565932667467428}
+  - component: {fileID: 291247223101066337}
   m_Layer: 0
   m_Name: SM_Multimetr_MASTECH
   m_TagString: Untagged
@@ -563,6 +564,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &291247223101066337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5062131661934319473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74bb4372a8d7479a8ad6c47b44bd31b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputResistance: 1000
+  _inputPower: 400
 --- !u!1 &5512645724002112394
 GameObject:
   m_ObjectHideFlags: 0
@@ -1023,6 +1038,7 @@ GameObject:
   - component: {fileID: 3718314155866640628}
   - component: {fileID: 3966794994878592368}
   - component: {fileID: 371617942867151789}
+  - component: {fileID: 6042905679279835696}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1147,6 +1163,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6042905679279835696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7267839485771256850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24597026f1eb4de39d436229f1d5d1f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _format: '{0:F2}'
+  _multimeter: {fileID: 291247223101066337}
 --- !u!1 &7935274043441976469
 GameObject:
   m_ObjectHideFlags: 0
