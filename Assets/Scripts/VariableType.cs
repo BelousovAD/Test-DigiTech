@@ -1,8 +1,8 @@
 internal enum VariableType
 {
     None = 0,
-    Amperage = 1,
-    Resistance = 2,
-    VoltageA = 3,
-    VoltageD = 4,
+    VoltageD = 1,
+    VoltageA = 2,
+    Amperage = 3,
+    Resistance = 4,
 }
