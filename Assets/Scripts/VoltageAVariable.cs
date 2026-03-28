@@ -1,4 +1,4 @@
-internal class VoltageAStrategy : IMeasurable
+internal class VoltageAVariable : IMeasurable
 {
     private const float Default = 0.01f;
     

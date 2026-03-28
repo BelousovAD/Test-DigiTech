@@ -1,4 +1,4 @@
-internal class NoneStrategy : IMeasurable
+internal class NoneVariable : IMeasurable
 {
     private const float Default = 0f;
     

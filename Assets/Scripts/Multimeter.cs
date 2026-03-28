@@ -8,22 +8,23 @@ internal class Multimeter : MonoBehaviour
     [SerializeField][Min(0f)] private float _inputResistance = 1000f;
     [SerializeField][Min(0f)] private float _inputPower = 400f;
 
-    private readonly StrategyType[] _types = Enum.GetValues(typeof(StrategyType)).Cast<StrategyType>().ToArray();
-    private readonly Dictionary<StrategyType, IMeasurable> _strategies = new ()
+    private readonly VariableType[]
+        _variableTypes = Enum.GetValues(typeof(VariableType)).Cast<VariableType>().ToArray();
+    private readonly Dictionary<VariableType, IMeasurable> _strategies = new ()
     {
-        [StrategyType.None] = new NoneStrategy(),
-        [StrategyType.Amperage] = new AmperageStrategy(),
-        [StrategyType.Resistance] = new ResistanceStrategy(),
-        [StrategyType.VoltageA] = new VoltageAStrategy(),
-        [StrategyType.VoltageD] = new VoltageDStrategy(),
+        [VariableType.None] = new NoneVariable(),
+        [VariableType.Amperage] = new AmperageVariable(),
+        [VariableType.Resistance] = new ResistanceVariable(),
+        [VariableType.VoltageA] = new VoltageAVariable(),
+        [VariableType.VoltageD] = new VoltageDVariable(),
     };
     private int _index;
     private float _value;
 
-    public event Action StrategyChanged;
+    public event Action VariableChanged;
     public event Action ValueChanged;
 
-    public StrategyType Strategy => _types[_index];
+    public VariableType Variable => _variableTypes[_index];
 
     public float Value
     {
@@ -38,8 +39,8 @@ internal class Multimeter : MonoBehaviour
 
     public void Next()
     {
-        _index = (_index + 1) % _types.Length;
-        StrategyChanged?.Invoke();
-        _strategies[_types[_index]].Measure(_inputPower, _inputResistance);
+        _index = (_index + 1) % _variableTypes.Length;
+        VariableChanged?.Invoke();
+        _strategies[_variableTypes[_index]].Measure(_inputPower, _inputResistance);
     }
 }

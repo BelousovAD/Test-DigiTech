@@ -1,6 +1,6 @@
 using System;
 
-internal class VoltageDStrategy : IMeasurable
+internal class VoltageDVariable : IMeasurable
 {
     public float Measure(float power, float resistance) =>
         MathF.Sqrt(power * resistance);

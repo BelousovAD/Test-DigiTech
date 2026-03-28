@@ -1,4 +1,4 @@
-internal enum StrategyType
+internal enum VariableType
 {
     None = 0,
     Amperage = 1,
