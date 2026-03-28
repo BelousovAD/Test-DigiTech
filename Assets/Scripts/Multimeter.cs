@@ -5,12 +5,16 @@ using UnityEngine;
 
 internal class Multimeter : MonoBehaviour
 {
+    private const int Backward = -1;
+    private const int Default = 0;
+    private const int Forward = 1;
+    
     [SerializeField][Min(0f)] private float _inputResistance = 1000f;
     [SerializeField][Min(0f)] private float _inputPower = 400f;
 
     private readonly VariableType[]
         _variableTypes = Enum.GetValues(typeof(VariableType)).Cast<VariableType>().ToArray();
-    private readonly Dictionary<VariableType, IMeasurable> _strategies = new ()
+    private readonly Dictionary<VariableType, IMeasurable> _variables = new ()
     {
         [VariableType.None] = new NoneVariable(),
         [VariableType.Amperage] = new AmperageVariable(),
@@ -37,10 +41,17 @@ internal class Multimeter : MonoBehaviour
         }
     }
 
-    public void Next()
+    public void Back() =>
+        Move(Backward);
+
+    public void Next() =>
+        Move(Forward);
+
+    private void Move(int direction)
     {
-        _index = (_index + 1) % _variableTypes.Length;
+        Value = Default;
+        _index = (_variableTypes.Length + _index + direction) % _variableTypes.Length;
         VariableChanged?.Invoke();
-        _strategies[_variableTypes[_index]].Measure(_inputPower, _inputResistance);
+        Value = _variables[_variableTypes[_index]].Measure(_inputPower, _inputResistance);
     }
 }

@@ -248,7 +248,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: V
+  m_text: ~
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -513,7 +513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _format: '{0:F2}'
   _multimeter: {fileID: 1405660216}
-  _type: 3
+  _type: 2
 --- !u!1 &512376189
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,7 +572,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ~
+  m_text: V
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -801,7 +801,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _format: '{0:F2}'
   _multimeter: {fileID: 1405660216}
-  _type: 2
+  _type: 4
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,9 +1060,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1873930036}
-  - {fileID: 418906461}
   - {fileID: 1744605609}
+  - {fileID: 418906461}
+  - {fileID: 1873930036}
   - {fileID: 1754855965}
   m_Father: {fileID: 1278146222}
   m_RootOrder: -1
@@ -1351,7 +1351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _format: '{0:F2}'
   _multimeter: {fileID: 1405660216}
-  _type: 1
+  _type: 3
 --- !u!1 &1278146218
 GameObject:
   m_ObjectHideFlags: 0
@@ -1925,4 +1925,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _format: '{0:F2}'
   _multimeter: {fileID: 1405660216}
-  _type: 4
+  _type: 1

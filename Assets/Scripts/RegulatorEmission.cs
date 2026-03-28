@@ -1,19 +1,35 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(MeshRenderer))]
-public class RegulatorEmission : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class RegulatorEmission : MonoBehaviour
 {
     private const string EmissionKey = "_EMISSION";
 
+    [SerializeField] private MultimeterRegulator _regulator;
+    
     private Material _material;
 
     private void Awake() =>
         _material = GetComponent<MeshRenderer>().material;
 
-    public void OnPointerEnter(PointerEventData eventData) =>
-        _material.EnableKeyword(EmissionKey);
+    private void OnEnable()
+    {
+        _regulator.InteractivityChanged += UpdateView;
+        UpdateView();
+    }
 
-    public void OnPointerExit(PointerEventData eventData) =>
-        _material.DisableKeyword(EmissionKey);
+    private void OnDisable() =>
+        _regulator.InteractivityChanged -= UpdateView;
+
+    private void UpdateView()
+    {
+        if (_regulator.IsInteractable)
+        {
+            _material.EnableKeyword(EmissionKey);
+        }
+        else
+        {
+            _material.DisableKeyword(EmissionKey);
+        }
+    }
 }
