@@ -34,7 +34,7 @@ internal class Multimeter : MonoBehaviour
     {
         get => _value;
 
-        set
+        private set
         {
             _value = value;
             ValueChanged?.Invoke();
