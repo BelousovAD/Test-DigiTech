@@ -1,0 +1,17 @@
+{
+    "name": "Regulator",
+    "rootNamespace": "",
+    "references": [
+        "GUID:d2ffde3b183f66c4db570b81f965cbb0",
+        "GUID:1df63f114c8dc9f46bde454d86c62f1b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
